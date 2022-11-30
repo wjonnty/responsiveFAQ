@@ -36,7 +36,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    scale: 1.2;
+    scale: 1.1;
   }
 }
 @media only screen and (max-width: 927px) and (orientation: landscape) {
