@@ -1,0 +1,124 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #4a4b5e;
+  font-size: 1.2rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-image: linear-gradient(#6565e7, #af67e9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgb(241, 241, 241);
+  width: 365px;
+  min-width: 365px;
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  padding-inline: 3rem;
+  border-radius: 2rem;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.534);
+  position: relative;
+}
+.container h1 {
+  font-size: 4rem;
+}
+
+.faqQuestions {
+  display: flex;
+  text-align: justify;
+  flex-direction: column;
+}
+.faqQuestions summary {
+  list-style: none;
+  cursor: pointer;
+}
+.faqQuestions details[open] {
+  cursor: auto;
+}
+.faqQuestions details {
+  border-bottom: 0.07rem solid #e7e7e9;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+}
+.faqQuestions p {
+  margin-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  color: #787887;
+}
+
+details[open] summary ~ * {
+  -webkit-animation: sweep 0.5s ease-in-out;
+          animation: sweep 0.5s ease-in-out;
+}
+
+@-webkit-keyframes sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+details summary::after {
+  content: "";
+  background-image: url(../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 7px;
+  width: 10px;
+  height: 7px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: 0.4s;
+}
+
+details[open] summary::after {
+  rotate: -180deg;
+}
+
+figure div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 17%;
+  transform: translateY(-59%);
+}
+
+#overimg {
+  width: 240px;
+  height: 180px;
+}
+
+#underimg {
+  width: 240px;
+  top: 52%;
+  position: absolute;
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */
