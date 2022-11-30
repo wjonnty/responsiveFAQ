@@ -34,6 +34,11 @@ body {
 .container h1 {
   font-size: 4rem;
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    scale: 1.2;
+  }
+}
 
 .faqQuestions {
   display: flex;
